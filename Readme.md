@@ -3,28 +3,25 @@
 ## 🚀 معرفی
 این یک **وب‌سایت پورتفولیو سفارشی با PHP MVC** است که برای نمایش پروژه‌ها، تجربیات و مهارت‌ها طراحی شده است. این پروژه از معماری **مدل-نما-کنترل‌کننده (MVC)** پیروی می‌کند که آن را **ساختاریافته، مقیاس‌پذیر و قابل نگهداری** می‌سازد.
 
+> **⚠️ توجه:**
+> این پروژه هنوز کامل نشده و ممکن است مشکلات و آسیب‌پذیری‌های زیادی داشته باشد. اگر پیشنهاد یا نظری دارید، خوشحال می‌شوم که بشنوم.
+
+
 ## 🎯 ویژگی‌ها
 ✅ پیروی از الگوی **MVC** برای کدنویسی تمیز و ماژولار.
 ✅ استفاده از **PDO** برای تعامل ایمن با پایگاه داده.
-✅ پشتیبانی از **متغیرهای محیطی (.env)** برای اطلاعات حساس.
 ✅ پیاده‌سازی **مدیریت خطا و ثبت لاگ**.
 ✅ طراحی شده با **رابط کاربری مدرن و واکنش‌گرا**.
 
 ## 📂 ساختار پروژه
 ```
 project-root/
-│── app/            # فایل‌های اصلی برنامه (ساختار MVC)
 │── public/         # فایل‌های عمومی (index.php، CSS، JS، تصاویر)
 │── config/         # فایل‌های پیکربندی (پایگاه داده، تنظیمات)
 │── views/          # قالب‌های فرانت‌اند (HTML، PHP)
 │── models/         # مدل‌های پایگاه داده
 │── controllers/    # کنترل‌کننده‌های برنامه
-│── vendor/         # وابستگی‌های Composer (نادیده گرفته‌شده در Git)
-│── .env            # متغیرهای محیطی (نادیده گرفته‌شده در Git)
-│── .gitignore      # تنظیمات نادیده‌گیری Git
-│── composer.json   # وابستگی‌های PHP
 │── README.md       # مستندات
-│── database.sql    # فایل اسکریپت پایگاه داده
 ```
 
 ## ⚙️ راهنمای نصب
@@ -90,6 +87,10 @@ php -S localhost:8000 -t public
 ## 🚀 Introduction
 This is a **custom PHP MVC portfolio website** designed to showcase projects, experiences, and skills. The project follows the **Model-View-Controller (MVC)** architecture, making it **structured, scalable, and maintainable**.
 
+> **⚠️ Note:**
+> This project is still under development and may have many issues and vulnerabilities. If you have any suggestions or feedback, I would be happy to hear them.
+
+
 ## 🎯 Features
 ✅ Follows the **MVC pattern** for clean and modular code.
 ✅ Uses **PDO** for secure database interactions.
@@ -100,18 +101,12 @@ This is a **custom PHP MVC portfolio website** designed to showcase projects, ex
 ## 📂 Project Structure
 ```
 project-root/
-│── app/            # Core application files (MVC structure)
 │── public/         # Public assets (index.php, CSS, JS, images)
 │── config/         # Configuration files (database, settings)
 │── views/          # Frontend templates (HTML, PHP)
 │── models/         # Database models
 │── controllers/    # Application controllers
-│── vendor/         # Composer dependencies (ignored in Git)
-│── .env            # Environment variables (ignored in Git)
-│── .gitignore      # Git ignore settings
-│── composer.json   # PHP dependencies
 │── README.md       # Documentation
-│── database.sql    # Database script file
 ```
 
 ## ⚙️ Installation Guide
