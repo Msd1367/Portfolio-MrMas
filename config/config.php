@@ -1,24 +1,19 @@
 <?php
-require_once '../vendor/autoload.php'; 
+// Database configuration using constants
+define('DB_NAME', 'portfolio_mrmas');
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 
-// Load environment variables from .env file if it exists
-if (file_exists(__DIR__ . '/../.env')) {
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
-    $dotenv->load();
-}
-
-// Database configuration using environment variables
-$db_name = $_ENV['DB_NAME'] ?? 'portfolio_mrmas';
-$db_host = $_ENV['DB_HOST'] ?? 'localhost';
-$db_user = $_ENV['DB_USER'] ?? 'root';
-$db_pass = $_ENV['DB_PASS'] ?? '';
-
-// PDO Connection with error handling
 try {
-    $db = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // Correct way to use constants
+    $db = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4", DB_USER, DB_PASS, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, 
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, 
+        PDO::ATTR_EMULATE_PREPARES => false, 
+    ]);
 } catch (PDOException $ex) {
-    error_log("Database connection error: " . $ex->getMessage()); // Log the error
-    die("Database connection error. Please contact the administrator."); // User-friendly message
+    error_log("Database connection error: " . $ex->getMessage()); 
+    die("Database connection error. Please contact the administrator."); 
 }
 ?>
