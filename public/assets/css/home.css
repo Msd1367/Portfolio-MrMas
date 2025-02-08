@@ -1,0 +1,613 @@
+/* Keyframes for animations */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hero Section */
+#hero {
+  background: url("../images/bg1.jpg") no-repeat center center/cover; /* Background image */
+  color: #fff;
+  height: 100vh; /* Full viewport height */
+  min-height: 600px; /* Ensures minimum height */
+  padding: 0 15px; /* Adjust padding for smaller screens */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  text-align: center;
+}
+
+/* Hero Title */
+#hero .hero-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+  margin-bottom: 1rem; /* Adds spacing between title and subtitle */
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both; 
+}
+
+/* Hero Subtitle */
+#hero .hero-subtitle {
+  font-size: 1.3rem;
+  color: #f8f9fa;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2rem; /* Adds spacing below subtitle */
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+/* Hero Button */
+#hero .hero-btn {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#hero .hero-btn:hover {
+  background-color: #0056b3;
+  animation: pulse 0.6s ease-out infinite; /* Pulse effect */
+}
+
+
+/* Responsive Adjustments */
+/* For Large Screens (1200px and below) */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 2.5rem; /* Slightly smaller title on larger screens */
+  }
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+}
+
+/* For Tablets (768px and below) */
+@media (max-width: 768px) {
+  #hero {
+    padding: 0 10px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem; /* Smaller title font for tablets */
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    font-size: 1rem;
+    padding: 0.65rem 1.25rem;
+  }
+}
+
+/* For Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem; /* Smallest title size for mobile */
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* About Section with Enhanced Fade Background */
+#about {
+  padding: 100px 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
+    url("../images/bg3.jpg") no-repeat center center/cover;
+  color: #e6e6e6;
+  background-attachment: fixed;
+  text-align: center; /* Center-align all text */
+}
+
+/* Title Styling */
+#about .about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  letter-spacing: 1px; /* Adds elegance */
+}
+#about .about-lead {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* About Cards Styling */
+#about .about-card {
+  background-color: rgba(
+    34,
+    34,
+    34,
+    0.9
+  ); /* Darker semi-transparent background */
+  border-radius: 15px;
+  color: #ffffff;
+  min-height: 250px;
+  flex: 1; /* Allow cards to stretch equally */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Center-align card content */
+  padding: 25px;
+  max-width: 90%; /* Prevent cards from becoming too wide */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Equal padding for alignment */
+#about .col-md-4 {
+  display: flex; /* Use Flexbox for equal height handling */
+  flex: 1; /* Stretch to fill the row */
+}
+
+#about .about-card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+/* Card Heading Styling */
+#about .about-heading {
+  font-size: 1.4rem;
+  color: #00c4ff; /* Bright accent color */
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+}
+
+/* Card Text Styling */
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #dcdcdc;
+}
+
+/* Icon Styling (Optional) */
+#about .about-icon {
+  font-size: 3rem;
+  color: #00c4ff;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Call-to-Action */
+#about .cta-button {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .cta-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+
+/* Medium Screens (Tablets) */
+@media (max-width: 992px) {
+  #about .about-title {
+    font-size: 1.6rem; /* Smaller title for medium screens */
+  }
+  #about .about-lead {
+    font-size: 1.1rem; /* Smaller lead text */
+  }
+
+  /* Adjust the card layout for better visibility */
+  #about .col-md-4 {
+    flex-basis: 45%; /* Allow cards to take up more space on smaller screens */
+  }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+  #about .about-title {
+    font-size: 1.4rem; /* Further reduce title size for small screens */
+  }
+
+  #about .about-lead {
+    font-size: 1rem; /* Smaller lead text */
+  }
+
+  /* Stack the cards vertically on smaller screens */
+  #about .row.justify-content-center {
+    flex-direction: column;
+  }
+
+  #about .col-md-4 {
+    flex-basis: 100%; /* Cards take full width on mobile */
+    margin-bottom: 20px;
+  }
+
+  /* Adjust call-to-action button */
+  #about .cta-button {
+    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+  }
+}
+
+/* Extra Small Screens (Mobile) */
+@media (max-width: 480px) {
+  #about .about-title {
+    font-size: 1.2rem; /* Smaller title for mobile */
+  }
+
+  #about .about-lead {
+    font-size: 0.9rem; /* Smaller lead text */
+  }
+
+  /* Make the call-to-action button more prominent on mobile */
+  #about .cta-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+
+  /* Adjust icon size for mobile */
+  #about .about-icon {
+    font-size: 2.5rem;
+  }
+}
+
+/* Resume Section */
+#resume {
+  background-color: #ffffff;
+  padding: 50px 0;
+  color: #2c3e50;
+}
+
+/* Resume Title */
+#resume h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 30px; /* Spacing between title and content */
+  margin-top: 3rem;
+  text-align: center; /* Center-align the title */
+}
+
+#resume .row {
+  display: flex; /* Enable flexbox for the row */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: center; /* Center the cards */
+}
+
+/* Resume Card Styling */
+#resume .resume-card {
+  background-color: rgba(
+    34,
+    34,
+    34,
+    0.9
+  ); /* Darker semi-transparent background */
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(33.33% - 20px); /* Three cards per row, with margin */
+  margin: 10px; /* Spacing between cards */
+  min-height: 430px;
+}
+
+/* Hover Effect for Cards */
+#resume .resume-card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Card Heading */
+#resume .resume-card h4 {
+  color: #00aaff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Card Text */
+#resume .resume-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #dcdcdc; /* Softer text color */
+}
+
+/* Card List Styling */
+#resume .resume-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#resume .resume-card ul li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#resume .resume-card ul li::before {
+  content: "-"; /* Adds a dash before each list item */
+}
+
+/* Skills Progress Bar */
+#resume .progress {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px; /* Uniform height */
+}
+
+#resume .progress-bar {
+  background-color: #007bff; /* Bright accent color */
+  height: 100%;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center; /* Center-align the text */
+  line-height: 25px; /* Vertically center the text */
+}
+
+/* Projects Section */
+#resume .projects {
+  padding: 50px 0;
+  color: #2c3e50;
+}
+
+/* Projects Title */
+#resume .projects h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #333333; /* Updated to a darker color for better readability */
+  text-align: center; /* Center-align the title */
+}
+
+/* Project Cards */
+#resume .projects .project-card {
+  background-color: rgba(
+    34,
+    34,
+    34,
+    0.9
+  ); /* Darker semi-transparent background */
+  border-radius: 8px;
+  color: #ffffff;
+  min-height: 350px; /* Minimum height for uniformity */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space evenly between content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 30px; /* Add space between cards */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Hover Effect for Project Cards */
+#resume .projects .project-card:hover {
+  background-color: rgba(70, 70, 70, 1); /* Brighter background for a stronger contrast */
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.6); 
+}
+
+/* Project Image */
+#resume .projects .project-card img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+/* Project Heading */
+#resume .projects .project-card .card-title {
+  font-size: 1.5rem;
+  color: #00aaff; /* Accent color */
+  margin-bottom: 1rem; /* Added more space below the title */
+  margin-bottom: 30px;
+}
+
+/* Project Description */
+#resume .projects .project-card .card-text {
+  font-size: 1rem;
+  line-height: 1.8; /* Increased line spacing for better readability */
+  color: #dcdcdc;
+  margin-bottom: 1.5rem; /* Added space between the description and other content */
+  overflow: hidden; /* Hide any text overflow */
+  text-overflow: ellipsis;
+  display: -webkit-box; /* Make it work for multiline text */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Show 3 lines of text */
+}
+
+/* Project Links */
+#resume .projects .project-links {
+  font-size: 1.1rem;
+  color: #00aaff;
+  text-decoration: none;
+}
+
+#resume .projects .project-links:hover {
+  color: #0077ff; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Card Body */
+#resume .projects .project-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures the button is at the bottom */
+  flex-grow: 1; /* Allows the body to take available space */
+  align-self: center; /* Center the button horizontally */
+  margin-top: auto; /* Push the button to the bottom of the card body */
+}
+
+#resume .projects .project-card a.btn {
+  background-color: #007bff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#resume .projects .project-card a.btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#resume a.colored-box {
+  display: block; /* Block element for better layout control */
+  background-color: #007bff; /* Bright and inviting background color */
+  border: 2px solid #0056b3; /* Subtle contrast border */
+  border-radius: 10px; /* Smooth rounded corners */
+  font-weight: bold;
+  max-width: 500px; /* Constrain width for a balanced design */
+  margin: 20px auto; /* Center the box with equal spacing */
+  text-align: center; /* Center-align the text inside */
+  text-decoration: none; /* No underline for the link */
+  color: #ffffff; /* Clear and readable text color */
+  font-size: 1.2rem; /* Slightly larger font for readability */
+  padding: 15px 20px; /* Spacing inside the box for a balanced layout */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#resume a.colored-box:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+  border-color: #004b9b; /* Match border color with hover background */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  cursor: pointer; /* Indicate interactivity */
+}
+
+/* Testimonials Section */
+#testimonials {
+  padding: 50px 0;
+  color: #333333;
+}
+
+/* Testimonials Title */
+#testimonials h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #444444;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Row Flexbox for Equal Height Cards */
+#testimonials .row {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  align-items: stretch; /* Ensure all cards stretch to equal height */
+}
+
+/* Testimonial Cards */
+#testimonials .card {
+  border: none; /* Remove default card border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  background-color: #ffffff; /* White background for testimonials */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Distribute content evenly */
+  min-height: 300px; /* Reduced min-height for a more compact card */
+}
+
+/* Ensure Equal Height for All Cards */
+#testimonials .card-body {
+  flex: 1; /* Makes the card body take available space */
+  padding: 20px; /* Reduced padding to make the card shorter */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Evenly distribute content */
+}
+
+/* Blockquote Styles (Removed the quote symbols) */
+#testimonials blockquote {
+  font-style: italic;
+  color: #555555; /* Slightly lighter text for the quote */
+  margin-bottom: 1rem;
+  padding-left: 20px;
+  border-left: 4px solid #00aaff; /* Accent color for the quote */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Author Name */
+#testimonials .blockquote-footer {
+  font-size: 1.1rem; /* Reduced font size */
+  font-weight: bold;
+  color: #00aaff; /* Accent color */
+  margin-top: 10px;
+}
+
+#testimonials .blockquote-footer:last-of-type {
+  font-size: 0.95rem; /* Smaller font size for the role/URL */
+  font-weight: normal;
+  color: #777777; /* Muted text for the role/URL */
+}
+
+/* Author Name */
+#testimonials .blockquote-footer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00aaff; /* Accent color */
+  margin-top: 10px;
+}
+
+#testimonials .blockquote-footer:last-of-type {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #777777; /* Muted text for the role/URL */
+}
+
+#testimonials .btn {
+  background-color: #007bff;
+}
+
+#testimonials .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #testimonials .row {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+  }
+
+  #testimonials h2 {
+    font-size: 1.75rem;
+  }
+}

@@ -1,0 +1,129 @@
+/* Contact Section */
+#contact {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f9f9f9, #e9ecef);
+  color: #333;
+  overflow: hidden;
+}
+
+/* Contact Title */
+#contact .contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+/* Contact Lead */
+#contact .contact-lead {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+/* Contact Info */
+#contact .contact-info,
+#contact .contact-form form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+#contact .contact-info h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#contact .social-links a {
+  font-size: 1.6rem;
+  margin: 8px;
+  color: #555;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contact .social-links a:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+/* Contact Form */
+#contact .contact-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+#contact .contact-form .form-group {
+  position: relative;
+}
+
+#contact .contact-form .form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#contact .contact-form .form-control:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#contact .contact-form .form-control:hover {
+  background: rgba(245, 245, 245, 0.9);
+}
+
+
+/* Keyframes for animations */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #contact .contact-info,
+  #contact .contact-form {
+    padding: 20px;
+    animation: none; /* Disable animations for smaller screens */
+  }
+
+  #contact .contact-btn {
+    padding: 0.65rem 1.25rem;
+  }
+}

@@ -1,0 +1,98 @@
+/* Donation Section */
+#donate {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Donation Title */
+#donate .donation-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Donation Description */
+#donate .donation-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+/* Donation Form */
+#donate form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group */
+#donate .form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Form Labels */
+#donate label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #333;
+}
+
+/* Form Inputs */
+#donate .form-control {
+    background: rgba(245, 245, 245, 0.95);
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+#donate .form-control:focus {
+    outline: none;
+    background: #ffffff;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+#donate .donation-btn {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#donate .donation-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #donate .donation-title {
+        font-size: 2rem;
+    }
+
+    #donate .donation-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    #donate form {
+        padding: 20px;
+    }
+}

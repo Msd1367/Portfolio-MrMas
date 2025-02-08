@@ -1,0 +1,240 @@
+/* Keyframes for animations */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Profile Section */
+#about-me .profile-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+  text-align: center;
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+#about-me .profile-img img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f1f1f1;
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+#about-me .profile-name {
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin: 20px 0 40px 0;
+  color: #333;
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+#about-me .profile-description {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 50px;
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+#about-me .social-links a {
+  font-size: 1.6rem;
+  margin: 0 8px;
+  color: #555;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#about-me .social-links a:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+/* Info Section */
+#about-me .info-section {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+
+/* Section Titles */
+#about-me .section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #ddd; /* Subtle underline */
+  padding-bottom: 5px;
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+#about-me .biography-section {
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+#about-me .section-description {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Skills Section */
+#about-me .skill-name {
+  font-size: 1.2rem;
+  color: #007bff;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+#about-me .skill-description {
+  font-size: 1rem;
+  color: #444;
+  background-color: #ffffff; /* Removed light blue background */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeSlideUp 1.5s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+/* Interest Cards */
+#about-me .interest-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border-left: 5px solid #28a745; /* Green accent */
+}
+
+#about-me .interest-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#about-me .interest-title {
+  color: #007bff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+#about-me .interest-description {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+/* Testimonials Section */
+#about-me .testimonial-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border-left: 6px solid #ff9800; /* Orange accent */
+}
+
+#about-me .testimonial-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#about-me .testimonial-message {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#about-me .testimonial-author {
+  font-weight: 600;
+  color: #007bff;
+  font-size: 1.1rem;
+}
+
+#about-me .testimonial-role {
+  font-size: 0.95rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #about-me .info-section {
+    padding: 15px;
+  }
+
+  #about-me .profile-section {
+    position: static; /* or position: relative; */
+    top: auto;
+  }
+
+  #about-me .section-title {
+    font-size: 1.6rem;
+    padding-bottom: 5px;
+  }
+
+  #about-me .section-description {
+    font-size: 0.95rem;
+  }
+
+  #about-me .interest-card,
+  #about-me .testimonial-card {
+    padding: 15px;
+  }
+
+  #about-me .skill-name {
+    font-size: 1.1rem;
+  }
+
+  #about-me .skill-description {
+    font-size: 1rem;
+  }
+}

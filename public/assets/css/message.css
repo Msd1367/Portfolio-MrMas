@@ -1,0 +1,85 @@
+/* General Message Box Styling */
+.message-box {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Success Message Box */
+.success {
+    background: linear-gradient(135deg, #d4edda 0%, #a3e1a3 100%);
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Error Message Box */
+.error {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Title Styling */
+.message-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: inherit;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+/* Icon Styling */
+.message-box .icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: inherit;
+}
+
+.message-box i {
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on icons */
+.message-box:hover i {
+    transform: scale(1.2);
+}
+
+/* Add subtle animation on the box */
+.message-box.success {
+    animation: slideInSuccess 0.6s ease-in-out;
+}
+
+.message-box.error {
+    animation: slideInError 0.6s ease-in-out;
+}
+
+@keyframes slideInSuccess {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInError {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

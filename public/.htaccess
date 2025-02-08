@@ -1,0 +1,51 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Rewrite `/single-project/{id}` to `index.php?route=single-project&projectId={id}`
+RewriteRule ^single-project/(\d+)$ index.php?route=single-project&projectId=$1 [QSA,L]
+
+# Rewrite `/page` to `/?route=page`
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ index.php?route=$1 [QSA,L]
+
+# Rewrite `/page/action` to `/?route=page/action`
+RewriteRule ^([^/]+)/([^/]+)/?$ index.php?route=$1/$2 [L,QSA]
+
+# Remove trailing slashes from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Enforce UTF-8 encoding for Farsi compatibility
+AddDefaultCharset UTF-8
+
+# Custom error pages
+ErrorDocument 404 /views/404.php
+ErrorDocument 500 /views/500.php
+
+# Set default index file
+DirectoryIndex index.php index.html
+
+# Security: Protect sensitive files
+<FilesMatch "^\.env|\.ini|\.log|\.sh|\.inc|\.bak$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Disable directory listing
+Options -Indexes
+
+# Cache static assets for performance
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+
+# Enable HSTS for HTTPS (if applicable)
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+</IfModule>
+
+# Prevent MIME type sniffing
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
