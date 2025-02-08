@@ -94,7 +94,6 @@ This is a **custom PHP MVC portfolio website** designed to showcase projects, ex
 ## 🎯 Features
 ✅ Follows the **MVC pattern** for clean and modular code.
 ✅ Uses **PDO** for secure database interactions.
-✅ Supports **environment variables (.env)** for sensitive credentials.
 ✅ Implements **error handling and logging**.
 ✅ Designed with **responsive and modern UI**.
 
