@@ -163,3 +163,9 @@ Contributions are welcome! Feel free to fork and submit pull requests. 😊
 ## 📧 Contact
 For questions or collaboration, contact **Masoud Sayahpour**:
 📩 Email: sayahpour.masoud@gmail.com
+
+## Final Version Notes
+- Refactored controllers and models
+- Improved routing and error handling
+- Code formatting cleaned
+- Added inline documentation
